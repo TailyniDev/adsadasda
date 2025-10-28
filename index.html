@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artistas Brasileiros no Cenário Geek e Pop</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header role="banner">
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="logo/logo.png" alt="Logotipo do site: Artistas Brasileiros Geek e Pop" aria-label="Logotipo principal do site" tabindex="0">
+                <h1 class="site-title">Artistas Brasileiros<br><span>Geek & Pop</span></h1>
+            </div>
+            
+            <nav role="navigation" aria-label="Menu de navegação com links externos relacionados ao tema geek e pop brasileiro">
+                <ul>
+                    <li><a href="https://www.omelete.com.br/" target="_blank" rel="noopener" aria-describedby="desc-omelete">
+                        <span class="nav-icon"><img src="logo/omelete_logo_25.png" alt="" width="100px"></span>
+                        Omelete
+                    </a></li>
+                    <li><a href="https://www.ccxp.com.br/" target="_blank" rel="noopener" aria-describedby="desc-ccxp">
+                        <span class="nav-icon"><img src="logo/ccxp_logo.png" alt="" width="35px"></span>
+                        CCXP
+                    </a></li>
+                    <li><a href="https://www.bgs.com.br/" target="_blank" rel="noopener" aria-describedby="desc-bgs">
+                        <span class="nav-icon"><img src="logo/bgs_logo.png" alt="" width="50px"></span>
+                        BGS
+                    </a></li>
+                </ul>
+                <p id="desc-omelete" style="display: none;">Site de notícias sobre cultura pop, games e quadrinhos no Brasil.</p>
+                <p id="desc-ccxp" style="display: none;">Comic Con Experience, maior evento geek do Brasil.</p>
+                <p id="desc-bgs" style="display: none;">Brasil Game Show, feira de games com foco em cultura brasileira.</p>
+            </nav>
+        </div>
+        
+        <div class="header-decoration">
+            <div class="decoration-item"><img src="lupi.gif" alt=""></div>
+            <div class="decoration-item"><img src="lupi.gif" alt=""></div>
+            <div class="decoration-item"><img src="lupi.gif" alt=""></div>
+            <div class="decoration-item"><img src="lupi.gif" alt=""></div>
+        </div>
+    </header>
+
+    <main role="main" aria-label="Conteúdo principal sobre artistas brasileiros no cenário geek e pop">
+
+        <!-- Acessibilidade: barra flutuante -->
+<div id="accessibility-toolbar" aria-label="Barra de ferramentas de acessibilidade" role="region">
+  <button id="ac-contrast" class="acc-btn" aria-pressed="false" aria-label="Ativar alto contraste" title="Alto contraste (A)">
+    <i class="fas fa-adjust" aria-hidden="true"></i>
+    <span class="sr-only">Alto contraste</span>
+  </button>
+
+  <button id="ac-a11y-increase" class="acc-btn" aria-label="Aumentar fonte" title="Aumentar fonte (A+)">
+    <i class="fas fa-search-plus" aria-hidden="true"></i>
+    <span class="sr-only">Aumentar fonte</span>
+  </button>
+
+  <button id="ac-a11y-decrease" class="acc-btn" aria-label="Diminuir fonte" title="Diminuir fonte (A-)">
+    <i class="fas fa-search-minus" aria-hidden="true"></i>
+    <span class="sr-only">Diminuir fonte</span>
+  </button>
+
+  <button id="ac-tts" class="acc-btn" aria-pressed="false" aria-label="Ler página em voz alta" title="Ler em voz alta (Play/Pausa)">
+    <i class="fas fa-play" aria-hidden="true"></i>
+    <span class="sr-only">Ler página</span>
+  </button>
+
+  <!-- VLibras (tradução para Libras) -->
+  <button id="ac-vlibras" class="acc-btn" aria-label="Ativar VLibras" title="Abrir VLibras">
+    <i class="fas fa-sign-language" aria-hidden="true"></i>
+    <span class="sr-only">VLibras</span>
+  </button>
+
+  <div id="accessibility-status" aria-live="polite" class="sr-only"></div>
+</div>
+
+<!-- VLibras script (cole no final do body, antes do seu script.js) -->
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+
+        <section aria-labelledby="intro-title" class="intro-section">
+            <h1 id="intro-title">Artistas Brasileiros no Cenário Geek e Pop: Artistas, Cosplayers e Influencers</h1>
+            <p>A cultura geek e pop no Brasil é vibrante e única, misturando elementos globais com toques de brasilidade, como carnaval, folclore e diversidade cultural. Artistas brasileiros estão conquistando o mundo com ilustrações inspiradas em super-heróis, cosplays criativos e conteúdos que celebram nossa identidade. Esta página destaca alguns deles e seu impacto.</p>
+            
+            <div class="search-filter">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="search-input" placeholder="Buscar artista...">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="artista">Artistas</button>
+                    <button class="filter-btn" data-filter="cosplayer">Cosplayers</button>
+                    <button class="filter-btn" data-filter="influencer">Influencers</button>
+                </div>
+            </div>
+        </section>
+
+        <section aria-labelledby="destaques-title">
+            <h2 id="destaques-title">Destaques: Artistas Brasileiros</h2>
+            <div class="cards-grid" id="cards-container">
+                <!-- Cards serão gerados dinamicamente via JavaScript -->
+            </div>
+        </section>
+
+        <section aria-labelledby="curiosidades-title" class="curiosidades-section">
+            <h2 id="curiosidades-title">Curiosidades e Impacto da Brasilidade no Meio Geek</h2>
+            <p>A brasilidade enriquece o geek: cosplays de heróis com fantasias de frevo, HQs sobre mitos indígenas e eventos como CCXP que misturam samba com sci-fi. Isso promove inclusão e exporta nossa cultura globalmente, com artistas como os acima liderando o movimento.</p>
+            <div class="curiosidades-grid">
+                <div class="curiosidade-card">
+                    <i class="fas fa-palette"></i>
+                    <h3>Ilustrações com Carnaval</h3>
+                    <p>Ilustrações brasileiras de Marvel/Disney incorporam festas como o Carnaval.</p>
+                </div>
+                <div class="curiosidade-card">
+                    <i class="fas fa-mask"></i>
+                    <h3>Cosplays Folclóricos</h3>
+                    <p>Cosplayers usam elementos folclóricos, como o Saci em versões de Link de Zelda.</p>
+                </div>
+                <div class="curiosidade-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Representatividade</h3>
+                    <p>Influencers debatem representatividade, como personagens negros em animes dublados no Brasil.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Artistas Brasileiros Geek & Pop</h3>
+                <p>Celebrando a cultura geek brasileira e seus talentos.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="#intro-title">Início</a></li>
+                    <li><a href="#destaques-title">Artistas</a></li>
+                    <li><a href="#curiosidades-title">Curiosidades</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+    <h3>Contato</h3>
+    <p>Entre em contato ou acompanhe minhas redes:</p>
+    <div class="social-icons">
+        <a href="mailto:tailyni80@gmail.com" aria-label="Enviar email">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 5.25L3 6V18L3.75 18.75H20.25L21 18V6L20.25 5.25H3.75ZM4.5 7.6955V17.25H19.5V7.69525L11.9999 14.5136L4.5 7.6955ZM18.3099 6.75H5.68986L11.9999 12.4864L18.3099 6.75Z" fill="#ffffff"></path> </g></svg>
+        </a>
+        <a href="https://github.com/tailynidev" target="_blank" rel="noopener" aria-label="Acessar GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.648.5.5 5.648.5 12A11.5 11.5 0 0 0 8 23.33c.59.11.8-.26.8-.58v-2.05c-3.26.71-3.95-1.57-3.95-1.57-.53-1.34-1.29-1.7-1.29-1.7-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.21 1.77 1.21 1.04 1.77 2.73 1.26 3.4.97.11-.76.41-1.26.74-1.55-2.6-.3-5.34-1.3-5.34-5.8 0-1.28.46-2.33 1.21-3.15-.12-.3-.53-1.52.11-3.16 0 0 .99-.32 3.25 1.2a11.29 11.29 0 0 1 2.96-.4 11.32 11.32 0 0 1 2.96.4c2.26-1.52 3.25-1.2 3.25-1.2.64 1.64.23 2.86.11 3.16.76.82 1.21 1.87 1.21 3.15 0 4.51-2.75 5.5-5.37 5.8.42.36.8 1.08.8 2.19v3.24c0 .32.21.7.81.58A11.5 11.5 0 0 0 23.5 12C23.5 5.648 18.352.5 12 .5z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/tailynisatiriodev/" target="_blank" rel="noopener" aria-label="Acessar LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v15H0V8zm7.5 0h4.79v2.06h.07c.67-1.26 2.31-2.59 4.76-2.59 5.09 0 6.03 3.35 6.03 7.7V23H18v-6.4c0-1.52-.03-3.47-2.12-3.47-2.12 0-2.44 1.66-2.44 3.37V23H9.57V8z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/tailyni_satirio" target="_blank" rel="noopener" aria-label="Acessar Instagram">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#ffffff"></path> <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#ffffff"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#ffffff"></path> </g></svg>
+        </a>
+    </div>
+</div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 - Atividade de Acessibilidade Web. Desenvolvido por Tailyni.</p>
+            <p>Créditos: Imagens placeholders (substitua por reais). Links externos para mais sobre o tema geek brasileiro.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
