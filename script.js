@@ -124,7 +124,7 @@ const artistas = [
         id: 17,
         nome: "Calango",
         categoria: "influencer",
-        imagem: "/fotos/calango.jpg",
+        imagem: "fotos/calango.jpg",
         descricao: "Um dos criadores de conteúdo mais versáteis, famoso por seus vídeos de comédia, gameplays e pela sua participação em projetos de RPG na Twitch.",
         conteudoExpandido: "Calango, ou Léo Calango, é conhecido por seu humor único e por transitar entre o YouTube (com vídeos editados e vlogs) e a Twitch (com lives longas e participações em RP, como Ordem Paranormal)."
     },
@@ -148,7 +148,7 @@ const artistas = [
         id: 20,
         nome: "Brubs",
         categoria: "artista",
-        imagem: "/fotos/brubs.jpg",
+        imagem: "fotos/brubs.jpg",
         descricao: "Desenhista talentoso com um canal no YouTube focado em tutoriais de desenho, speedpaints e dicas de arte digital, inspirando milhares de novos artistas.",
         conteudoExpandido: "Brubs faz um trabalho excelente em desmistificar o processo de criação de arte. Seu canal é um arsenal de histórias animadas sobre suas experiencias."
     },
@@ -597,4 +597,5 @@ document.addEventListener('DOMContentLoaded', function() {
     if (e.key === 'Tab') document.documentElement.classList.add('show-focus-outline');
   });
 })();
+
 
