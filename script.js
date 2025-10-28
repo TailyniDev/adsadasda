@@ -44,7 +44,7 @@ const artistas = [
         id: 6,
         nome: "Ljoga",
         categoria: "influencer",
-        imagem: "fotos/ljoga.jfif",
+        imagem: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.twitch.tv%2FLJoga%2Fvideos%3Flang%3Dpt-br&psig=AOvVaw0KRuse7kvY1HGL-lHRM8ZB&ust=1761756694291000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCOiW6bitx5ADFQAAAAAdAAAAABAK",
         descricao: "Criador de conteúdo de variedade na Twitch e amigo próximo de Alanzoka.",
         conteudoExpandido: "Conhecido por suas transmissões descontraídas e interações com a comunidade, Ljoga é uma figura popular no cenário de streaming brasileiro, focado principalmente em Just Chatting e games casuais."
     },
@@ -597,5 +597,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (e.key === 'Tab') document.documentElement.classList.add('show-focus-outline');
   });
 })();
+
 
 
